@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>City Chat</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      #map {width: 100%; height: 400px; background: #eee;}
+    </style>
+    <script src="//maps.googleapis.com/maps/api/js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>City Chat</h1>
+      <div id="map"></div>
+      <p>
+         Latitude: <input type="text" id="lat" readonly=true />,
+         Longitude: <input type="text" id="long" readonly=true />
+      </p>
+      <section>
+        <div id="messages"></div>
+        <input id="chat-input" type="text" placeholder="say anything" autofocus class="form-control" />
+      </section>
+    </div>
+
+    <script src="https://media.twiliocdn.com/sdk/js/chat/v1.0/twilio-chat.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{% static "chat/scripts/city.js" %}"></script>
+  </body>
+</html>

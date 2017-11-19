@@ -13,6 +13,10 @@ def chat(request):
     return render(request, 'chat/index.html')
 
 
+def city(request):
+    return render(request, 'chat/city.html')
+
+
 def token(request):
     identity = request.GET.get('identity', fake.user_name()).encode('utf-8')
     device_id = request.GET.get('device', 'default')  # unique device ID
